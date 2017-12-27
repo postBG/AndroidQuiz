@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.mission3.MainActivity">
 
-    <android.support.constraint.Guideline
-        android:id="@+id/horizontalCenterGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5"/>
-
     <HorizontalScrollView
         android:id="@+id/horizontalScroll1"
         android:layout_width="wrap_content"
@@ -35,8 +28,7 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/buttons"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalCenterGuideline">
+        android:layout_height="wrap_content">
 
         <android.support.constraint.Guideline
             android:id="@+id/verticalCenterGuideline"
@@ -75,7 +67,7 @@
                 android:id="@+id/image2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/railbridge" />
+                android:src="@drawable/grindelwald" />
         </ScrollView>
     </HorizontalScrollView>
 </android.support.constraint.ConstraintLayout>
