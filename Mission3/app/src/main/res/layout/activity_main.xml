@@ -50,12 +50,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:text="@string/up"
+            android:onClick="switchImages"
             app:layout_constraintRight_toLeftOf="@+id/verticalCenterGuideline"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:onClick="switchImages"
             app:layout_constraintLeft_toRightOf="@+id/verticalCenterGuideline"
             android:text="@string/down"/>
     </android.support.constraint.ConstraintLayout>
