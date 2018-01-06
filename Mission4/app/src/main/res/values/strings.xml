@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Mission4</string>
-    <string name="max_bytes">&#032;/&#032;80&#032;바이트</string>
+    <string name="max_bytes">80</string>
     <string name="transmit">전송</string>
     <string name="cancel">닫기</string>
+    <string name="slash">&#032;/&#032;</string>
+    <string name="bytes">&#032;바이트</string>
 </resources>
