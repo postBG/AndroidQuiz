@@ -6,7 +6,10 @@ import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView currentChar;
     private TextView maxChar;
     private AppCompatEditText editText;
+    private Button submit;
 
 
     @Override
@@ -23,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         maxChar = (TextView) this.findViewById(R.id.max_char);
+        maxChar.setText(String.valueOf(MAX_CHAR));
+
         currentChar = (TextView) this.findViewById(R.id.current_char);
         editText = (AppCompatEditText) this.findViewById(R.id.editText);
-
-        maxChar.setText(String.valueOf(MAX_CHAR));
         editText.setFilters(new InputFilter[]{
                 new InputFilter.LengthFilter(MAX_CHAR)
         });
@@ -46,5 +50,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        submit = (Button) this.findViewById(R.id.submit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, editText.getText().toString(), Toast.LENGTH_LONG).show();
+            }
+        });
     }
+
 }
