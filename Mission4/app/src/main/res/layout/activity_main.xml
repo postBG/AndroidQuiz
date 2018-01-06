@@ -23,7 +23,10 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline"
         android:gravity="top"
-        android:background="@drawable/back"/>
+        android:background="@drawable/back"
+        android:lineSpacingExtra="15dp"
+        android:textSize="45sp"
+        android:text="안녕하세요나야나\n그래안녕하냐바보"/>
 
     <LinearLayout
         android:id="@+id/byte_constraints"
