@@ -6,12 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.mission6.MainActivity">
 
-    <android.support.constraint.Guideline
-        android:id="@+id/horizontal_center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5"/>
+    <include layout="@layout/horizontal_center_guideline" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -27,19 +22,23 @@
             android:orientation="vertical">
 
             <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/id_edit_text"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/id"/>
 
             <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/password_edit_text"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"/>
         </LinearLayout>
 
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/login_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:onClick="onClickLogin"
             android:text="@string/login" />
     </LinearLayout>
 

@@ -20,9 +20,16 @@
         </activity>
         <activity
             android:name=".MenuActivity"
-            android:label="메인 메뉴">
-
-        </activity>
+            android:label="메인 메뉴" />
+        <activity
+            android:name=".ManageCustomerActivity"
+            android:label="고객 관리"/>
+        <activity
+            android:name=".ManageItemActivity"
+            android:label="상품 관리"/>
+        <activity
+            android:name=".ManageIncomeActivity"
+            android:label="매출 관리" />
     </application>
 
 </manifest>
