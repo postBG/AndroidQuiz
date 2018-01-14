@@ -22,6 +22,17 @@ public class MainActivity extends AppCompatActivity {
         passwordEditText = (AppCompatEditText) findViewById(R.id.password_edit_text);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        Intent intent = getIntent();
+        Bundle data = intent.getExtras();
+        if (data != null && data.containsKey("statement")) {
+            Toast.makeText(getApplicationContext(), data.getString("statement"), Toast.LENGTH_LONG).show();
+        }
+    }
+
     public void onClickLogin(View view) {
         if (!isInputsAllValid()) {
             Toast.makeText(getApplicationContext(), "아이디/비밀번호를 입력해주세요", Toast.LENGTH_LONG).show();
@@ -33,16 +44,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("id", idEditText.getText().toString());
         intent.putExtra("password", passwordEditText.getText().toString());
 
-        startActivityForResult(intent, RequestCode.getCodeFromClass(MenuActivity.class));
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (resultCode == RESULT_OK) {
-            Toast.makeText(getApplicationContext(), data.getExtras().getString("statement"), Toast.LENGTH_LONG).show();
-        }
+        startActivity(intent);
     }
 
     private boolean isInputsAllValid() {

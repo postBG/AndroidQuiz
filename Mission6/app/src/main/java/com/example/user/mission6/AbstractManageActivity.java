@@ -21,9 +21,7 @@ public abstract class AbstractManageActivity extends AppCompatActivity {
         intent.putExtra("statement", getStatement());
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
-        setResult(RESULT_OK, intent);
         startActivity(intent);
-        finish();
     }
 
     protected abstract String getStatement();
