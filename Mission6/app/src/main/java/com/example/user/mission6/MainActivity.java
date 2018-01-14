@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickLogin(View view) {
         if (!isInputsAllValid()) {
             Toast.makeText(getApplicationContext(), "아이디/비밀번호를 입력해주세요", Toast.LENGTH_LONG).show();
+            return;
         }
 
         Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
