@@ -8,12 +8,14 @@
         android:id="@+id/to_menu_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClickToMenu"
         android:text="@string/to_menu"/>
 
     <Button
         android:id="@+id/to_login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClickToLogin"
         android:text="@string/to_login"/>
 
 </LinearLayout>

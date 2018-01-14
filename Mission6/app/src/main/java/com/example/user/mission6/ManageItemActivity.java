@@ -1,9 +1,8 @@
 package com.example.user.mission6;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ManageItemActivity extends AppCompatActivity {
+public class ManageItemActivity extends AbstractManageActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -11,4 +10,8 @@ public class ManageItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_manage_item);
     }
 
+    @Override
+    protected String getStatement() {
+        return "상품 관리 화면";
+    }
 }
