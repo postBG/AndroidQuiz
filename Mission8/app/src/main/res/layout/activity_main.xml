@@ -12,8 +12,8 @@
         android:id="@+id/search_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
+        android:paddingLeft="31dp"
+        android:paddingRight="31dp"
         android:drawableLeft="@drawable/ic_keyboard_arrow_down_black_24px" />
 
     <LinearLayout
