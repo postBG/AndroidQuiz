@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mission8</string>
+    <string name="move">이동</string>
 </resources>
