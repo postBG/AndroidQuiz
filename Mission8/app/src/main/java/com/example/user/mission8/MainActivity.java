@@ -6,6 +6,7 @@ import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatEditText;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Animation slideDownAnimation;
     private Animation slideUpAnimation;
 
+    private AppCompatEditText uriInput;
     private Button searchButton;
     private LinearLayout searchBar;
     private WebView webView;
@@ -33,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
         searchButton = (Button) findViewById(R.id.search_button);
         searchBar = (LinearLayout) findViewById(R.id.search_bar);
+        uriInput = (AppCompatEditText) findViewById(R.id.url_input);
+
         webView = (WebView) findViewById(R.id.web_view);
-
         webView.getSettings().setJavaScriptEnabled(true);
-
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("http://m.naver.com/");
 
@@ -87,5 +89,15 @@ public class MainActivity extends AppCompatActivity {
             searchBar.startAnimation(slideDownAnimation);
             searchButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_keyboard_arrow_up_black_24px, 0, 0, 0);
         }
+    }
+
+    public void onClickSearch(View view) {
+        String uri = uriInput.getText().toString();
+        uriInput.setText("");
+
+        webView.loadUrl(uri);
+
+        searchBar.startAnimation(slideUpAnimation);
+        searchButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_keyboard_arrow_down_black_24px, 0, 0, 0);
     }
 }
